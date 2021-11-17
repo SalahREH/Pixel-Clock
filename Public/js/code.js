@@ -13,7 +13,7 @@ function setDate(){
     minHand.style.transform = `rotate(${mindegree}deg)`
 
     const hours = now.getHours();
-    let hdegree = ((hours / 60) * 360) + 90
+    let hdegree = ((hours / 12) * 360) + 90
     hourHand.style.transform = `rotate(${hdegree}deg)`
 
     let days = now.getDay();
