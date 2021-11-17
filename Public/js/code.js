@@ -34,10 +34,14 @@ let bg4 = `url("../img/gif-background4.gif")`
 let bg5 = `url("../img/gif-background5.gif")`
 let bg6 = `url("../img/gif-background6.gif")`
 let arraybg = [bg1 , bg2 , bg3 , bg4 , bg5 ,]
-let bgm1 = `url("../img/gif-background.gif")`
-let bgm2 = ``
-let bgm3 = ``
-let arraybgmobile = [bgm1, bgm2 , bgm3]
+let bgm1 = `url("../img/bgmobile.jpg")`
+let bgm2 = `url("../img/gif-bgmobile.gif")`
+let bgm3 = `url("../img/gif-bgmobile2.gif")`
+let bgm4 = `url("../img/gif-bgmobile3.gif")`
+let bgm5 = `url("../img/gif-bgmobile4.gif")`
+let bgm6 = `url("../img/gif-bgmobile5.gif")`
+let bgm7 = `url("../img/gif-bgmobile6.gif")`
+let arraybgmobile = [bgm1, bgm2 , bgm3 , bgm4 , bgm5 , bgm6 , bgm7]
 
 function randombg() {
     let rdm = arraybg[Math.floor(Math.random() * arraybg.length)]

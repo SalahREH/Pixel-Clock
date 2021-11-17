@@ -1,6 +1,6 @@
 :root{
     --bg: url("../img/gif-background.gif");
-    --bgmobile: url("../img/gif-background.gif")
+    --bgmobile: url("../img/bgmobile.jpg")
 }
 
 
@@ -115,6 +115,7 @@ body{
     body{
         background-image: var(--bgmobile);
         justify-content: flex-start;
+        background-position-x: center;
     }
     .container{
     justify-content: flex-start;
@@ -129,6 +130,7 @@ body{
         top: 2vh;
         width: 95vw;
         height:85vh;
+        opacity: 0.4;
     }
     .change-bg{
         left: auto;
