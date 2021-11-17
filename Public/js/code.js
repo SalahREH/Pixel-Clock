@@ -16,11 +16,11 @@ function setDate(){
     let hdegree = ((hours / 12) * 360) + 90
     hourHand.style.transform = `rotate(${hdegree}deg)`
 
-    let days = now.getDay();
-    let months = now.getMonth();
+    let days = now.getDate();
+    let months = now.getMonth() +  1;
     let year = now.getFullYear();
     
-    console.log();
+    console.log(days);
     document.querySelector(".date").innerHTML = `Today is<br>${days}/${months}/${year}`
 }
 
