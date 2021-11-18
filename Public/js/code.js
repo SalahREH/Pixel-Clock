@@ -3,6 +3,9 @@ let minHand = document.querySelector(".min-hand")
 let hourHand = document.querySelector(".hour-hand")
 
 function setDate(){
+    let secHand = document.querySelector(".sec-hand")
+    let minHand = document.querySelector(".min-hand")
+    let hourHand = document.querySelector(".hour-hand")
     const now = new Date();
     const seconds = now.getSeconds();
     let secdegree = ((seconds / 60) * 360) + 90
@@ -26,36 +29,48 @@ function setDate(){
 
 
 setInterval(setDate, 1000)
+let bg = [
+    {
+        bg: `url("../img/gif-background.gif")`,
+        bgmobile: `url("../img/bgmobile.jpg")`,
+    },
+    {
+        bg: `url("../img/gif-background2.gif")`,
+        bgmobile: `url("../img/gif-bgmobile.gif")`,
+    },
+    {
+        bg: `url("../img/gif-background3.gif")`,
+        bgmobile: `url("../img/gif-bgmobile2.gif")`,
+    },
+    {
+        bg: `url("../img/gif-background4.gif")`,
+        bgmobile: `url("../img/gif-bgmobile3.gif")`,
+    },
+    {
+        bg: `url("../img/gif-background5.gif")`,
+        bgmobile: `url("../img/gif-bgmobile4.gif")`,
+    },
+    {
+        bg: `url("../img/gif-background5.gif")`,
+        bgmobile: `url("../img/gif-bgmobile5.gif")`,
+    },
 
-let bg1 = `url("../img/gif-background.gif")`
-let bg2 = `url("../img/gif-background2.gif")`
-let bg3 = `url("../img/gif-background3.gif")`
-let bg4 = `url("../img/gif-background4.gif")`
-let bg5 = `url("../img/gif-background5.gif")`
-let bg6 = `url("../img/gif-background6.gif")`
-let arraybg = [bg1 , bg2 , bg3 , bg4 , bg5 ,]
-let bgm1 = `url("../img/bgmobile.jpg")`
-let bgm2 = `url("../img/gif-bgmobile.gif")`
-let bgm3 = `url("../img/gif-bgmobile2.gif")`
-let bgm4 = `url("../img/gif-bgmobile3.gif")`
-let bgm5 = `url("../img/gif-bgmobile4.gif")`
-let bgm6 = `url("../img/gif-bgmobile5.gif")`
-let bgm7 = `url("../img/gif-bgmobile6.gif")`
-let arraybgmobile = [bgm1, bgm2 , bgm3 , bgm4 , bgm5 , bgm6 , bgm7]
+]
 
 function randombg() {
-    let rdm = arraybg[Math.floor(Math.random() * arraybg.length)]
+    let rdm = bg[Math.floor(Math.random() * bg.length)].bg
     document.documentElement.style.setProperty("--bg" , rdm)
     console.log(rdm);
 }
 function randombgmobile() {
-    let rdm = arraybgmobile[Math.floor(Math.random() * arraybgmobile.length)]
+    let rdm = bg[Math.floor(Math.random() * bg.length)].bgmobile
     document.documentElement.style.setProperty("--bgmobile" , rdm)
     console.log(rdm);
 }
 
 document.querySelector(".change-bg").addEventListener("click", randombg)
 document.querySelector(".change-bg").addEventListener("click", randombgmobile)
+
 let audio1 = new Audio("./music/713.mp3")
 function playbgm(){
     audio1.play();
@@ -66,5 +81,10 @@ function pausebgm(){
     console.log("patimicola");
 }
 
+function changeVolume(){
+    audio1.volume = this.value / 100
+}
+
 document.querySelector(".play-button").addEventListener("click",playbgm)
 document.querySelector(".pause-button").addEventListener("click",pausebgm)
+document.querySelector("#volume").addEventListener("change", changeVolume)

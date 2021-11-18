@@ -49,7 +49,6 @@ body{
 }
 .change-bg{
     position: absolute;
-    left: 8vw;
     background: rgb(0,161,51);
     background: linear-gradient(130deg, rgba(0,161,51,1) 0%, rgba(159,255,191,1) 100%);
     color: rgb(0, 0, 0);
@@ -65,7 +64,6 @@ body{
 .play-button{
     position: absolute;
     top: 30vh;
-    left: 8vw;
     background: rgb(0,161,51);
     background: linear-gradient(130deg, rgba(0,161,51,1) 0%, rgba(159,255,191,1) 100%);
     color: rgb(0, 0, 0);
@@ -80,7 +78,6 @@ body{
 .pause-button{
     position: absolute;
     top: 15vh;
-    left: 8vw;
     background: rgb(0,161,51);
     background: linear-gradient(130deg, rgba(0,161,51,1) 0%, rgba(159,255,191,1) 100%);
     color: rgb(0, 0, 0);
@@ -92,13 +89,26 @@ body{
     border-style: none;
     padding: 0;
 }
+.change-bg:active , .pause-button:active , .play-button:active{
+    background: white;
+}
 .blur{
     filter: blur(5px);
     width: 100%;
     height: 100%;
     
 }
-
+.button{
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    left: 20vw;
+}
+#volume{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 37.5vh;
+    left: 20vw;
+}
 .clock{
     background-color: transparent;
     width: 300px;
